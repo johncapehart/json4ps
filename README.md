@@ -1,1 +1,3 @@
-https://ci.appveyor.com/api/projects/status/github/johncapehart/json4ps?branch=master&svg=true
+# Grunt: The JavaScript Task Runner
+
+[![Build Status: Windows](https://ci.appveyor.com/api/projects/status/github/johncapehart/json4ps?branch=master&svg=true)
