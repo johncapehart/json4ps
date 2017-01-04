@@ -161,12 +161,13 @@ Merge-Json @('test1.json', $s2)
             var rs = new RunspaceInvoke();
             var result = rs.Invoke(@"import-module '.\Json.Automation.dll'");
             result = rs.Invoke(@"
-Merge-Json '.\test1.json','..\test2.json'
+Merge-Json '.\test1.json','.\test2.json'
 ");
             JObject o = JObject.Parse(result[0].ToString());
             Assert.AreEqual("Mary", o["r"]["name"]);
             Assert.AreEqual(6, o["r"]["height"]);
         }
+        [Ignore()]
         [TestMethod()]
         public void MergeJsonCmdletTestFromFile2() {
             var rs = new RunspaceInvoke();
@@ -178,6 +179,7 @@ $PSDefaultParameterValues;
             var d = (DefaultParameterDictionary)result[0].BaseObject;
             Assert.AreEqual("Json4PS", d[@"Publish-Module:ModuleName"].ToString());
         }
+        [Ignore()]
         [TestMethod()]
         public void MergeJsonCmdletTestFromFile3() {
             var rs = new RunspaceInvoke();
