@@ -161,7 +161,7 @@ Merge-Json @('test1.json', $s2)
             var rs = new RunspaceInvoke();
             var result = rs.Invoke(@"import-module '.\Json.Automation.dll'");
             result = rs.Invoke(@"
-Merge-Json '.\test1.json','..\Debug\test2.json'
+Merge-Json '.\test1.json','..\test2.json'
 ");
             JObject o = JObject.Parse(result[0].ToString());
             Assert.AreEqual("Mary", o["r"]["name"]);

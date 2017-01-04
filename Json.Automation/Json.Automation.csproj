@@ -87,7 +87,9 @@
   <PropertyGroup>
     <PostBuildEvent>copy $(TargetDir)*.dll $(SolutionDir)lib\
 del $(SolutionDir)lib\Microsoft*
-del $(SolutionDir)lib\System*</PostBuildEvent>
+del $(SolutionDir)lib\System*
+xcopy /y $(SolutionDir)json4ps.ps*1,$(SolutionDir)lib "C:\Program Files\WindowsPowerShell\Modules\json4ps\"
+xcopy /y $(SolutionDir)lib "C:\Program Files\WindowsPowerShell\Modules\json4ps\lib\"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
