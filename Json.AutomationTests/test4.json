@@ -1,0 +1,4 @@
+{
+	"server":"server.domain.com",
+  "special": "foo %"
+}

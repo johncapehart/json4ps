@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x64</Platform>
+    <ProductVersion>3.10</ProductVersion>
+    <ProjectGuid>26d9e6a5-9bc2-475f-91aa-7e08fb50dc43</ProjectGuid>
+    <SchemaVersion>2.0</SchemaVersion>
+    <OutputName>Json4PS</OutputName>
+    <OutputType>Package</OutputType>
+    <WixTargetsPath Condition=" '$(WixTargetsPath)' == '' AND '$(MSBuildExtensionsPath32)' != '' ">$(MSBuildExtensionsPath32)\Microsoft\WiX\v3.x\Wix.targets</WixTargetsPath>
+    <WixTargetsPath Condition=" '$(WixTargetsPath)' == '' ">$(MSBuildExtensionsPath)\Microsoft\WiX\v3.x\Wix.targets</WixTargetsPath>
+    <Name>ModuleInstaller</Name>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <OutputPath>bin\$(Platform)\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>obj\$(Platform)\$(Configuration)\</IntermediateOutputPath>
+    <DefineConstants>Debug</DefineConstants>
+    <DefineConstants>ModuleDir=C:\Program Files\WindowsPowerShell\Modules\Json4PS</DefineConstants>
+    <WixVariables>TargetName=Json4PS</WixVariables>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <OutputPath>bin\$(Platform)\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>obj\$(Platform)\$(Configuration)\</IntermediateOutputPath>
+    <DefineConstants>ModuleDir=C:\Program Files\WindowsPowerShell\Modules\Json4PS</DefineConstants>
+    <WixVariables>TargetName=Json4PS</WixVariables>
+    <Cultures />
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="ModuleHeat.wxs" />
+    <Compile Include="Product.wxs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="excludegit.xsl" />
+  </ItemGroup>
+  <Import Project="$(WixTargetsPath)" />
+  <PropertyGroup>
+    <PreBuildEvent>"%25PROGRAMFILES(x86)%25\WiX Toolset v3.10\bin\heat.exe" dir "%25ProgramW6432%25\WindowsPowerShell\Modules\$(TargetName)" -dr INSTALLDIR -cg ModuleComponents -gg -g1 -sf -srd -sreg -var "var.ModuleDir" -out "$(ProjectDir)ModuleHeat.wxs" -t "$(ProjectDir)excludegit.xsl"</PreBuildEvent>
+  </PropertyGroup>
+  <!--
+	To modify your build process, add your task inside one of the targets below and uncomment it.
+	Other similar extension points exist, see Wix.targets.
+	<Target Name="BeforeBuild">
+	</Target>
+	<Target Name="AfterBuild">
+	</Target>
+	-->
+</Project>

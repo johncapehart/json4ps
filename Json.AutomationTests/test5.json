@@ -1,0 +1,22 @@
+{
+    "TestTargets": ["someworker"],
+    "TestCredentialName": "somecredentialname",
+    "FilePattern": "TestFileLock",
+    "TestFileServer": "someserver",
+    "FilePathForLock": "\\\\someserver\\somepath\\TestFileLock.csv",
+    "FilePath": "C:\\someshare\\somepath\\TestFileLock.csv",
+    "TestWhatif": true,
+    "UnlockRequest": [
+        {
+		    "Hostname" : "someserver",
+		    "ID" : "13456789",
+		    "User" : "someuser",
+		    "Type" : "Windows",
+		    "Locks" : "0",
+		    "Mode" : "Write + Read",
+		    "Path" : "C:\\someshare\\somepathTest\\FileLock.csv",
+		    "Filename" : "TestFileLock.csv",
+		    "Selected" : true
+	    }
+    ]
+}

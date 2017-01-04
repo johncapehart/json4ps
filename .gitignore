@@ -1,0 +1,17 @@
+.idea/
+.tmp/
+.vs/
+bin/
+obj/
+node_modules/
+bower_components/
+packages/
+public/
+dist/
+*.user
+*secret*
+*delete*
+*snippets*
+**/local.*
+npm-debug.log
+coverage

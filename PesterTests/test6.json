@@ -1,0 +1,14 @@
+{
+	"foofunc1" : {
+		"name" : "john",
+		"foo" : "bar",
+		"date" : "{ Get-Date -Format MMddyyyy }",
+		"array" : [1,2]
+	},
+	"foofunc2" : {
+		"name" : "Dave",
+		"date" : "{ Get-Date -Format yyyy }",
+        "anull": null
+	},
+	"foo1" : "blech"
+}
