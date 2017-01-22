@@ -39,6 +39,7 @@
     "Publish-Module":  {
                            "ModuleName":  "Json4PS",
                            "BinarySourceDirectory":  "lib",
-                           "BuildTargets":  null
-                       }
+                           "BuildTargets":  null,
+                           "OutputDirectory": "nuget"
+                        }
 }

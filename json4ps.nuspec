@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>json4ps</id>
+    <version>0.2.2.1</version>
+    <authors>John Capehart</authors>
+    <owners>John Capehart</owners>
+    <licenseUrl>https://raw.githubusercontent.com/johncapehart/json4ps/master/LICENSE.md</licenseUrl>
+    <projectUrl>https://github.com/johncapehart/json4ps</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Json extensions for PowerShell based on Newtonsoft Json.Net</description>
+    <releaseNotes>Alpha</releaseNotes>
+    <copyright>Copyright 2017</copyright>
+    <tags>json powershell</tags>
+    <dependencies>
+      <dependency id="Newtonsoft.Json" version="9.0.0.0" />
+    </dependencies>
+  </metadata>
+</package>
