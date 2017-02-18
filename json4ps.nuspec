@@ -13,7 +13,6 @@
     <copyright>Copyright 2017</copyright>
     <tags>json powershell</tags>
     <dependencies>
-      <dependency id="Newtonsoft.Json" version="9.0.0.0" />
     </dependencies>
   </metadata>
 </package>
