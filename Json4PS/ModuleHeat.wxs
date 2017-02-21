@@ -7,16 +7,16 @@
     </Fragment>
     <Fragment>
         <ComponentGroup Id="ModuleComponents">
-            <Component Id="cmp8F3B8F30DAF99B12FDF7B01144792A9D" Directory="INSTALLDIR" Guid="C9D0E104-822A-4560-8337-F2FC218F761F">
+            <Component Id="cmp8F3B8F30DAF99B12FDF7B01144792A9D" Directory="INSTALLDIR" Guid="F1166195-5EE1-4C82-906C-237B13815E20">
                 <File Id="filF0E0A8F6791028AFB5B7328FD093A1FA" KeyPath="yes" Source="$(var.ModuleDir)\Json4PS.psd1" />
             </Component>
-            <Component Id="cmpB0C944B60C427C489B3078B2B58F1F67" Directory="INSTALLDIR" Guid="D2D04CCC-7C83-4116-8D85-BB901A4121A4">
+            <Component Id="cmpB0C944B60C427C489B3078B2B58F1F67" Directory="INSTALLDIR" Guid="851452B1-DCAB-478A-AFBA-BC0B01F5812E">
                 <File Id="fil025EB44B09B240E1010AC699C952F7E0" KeyPath="yes" Source="$(var.ModuleDir)\Json4PS.psm1" />
             </Component>
-            <Component Id="cmp369EE07923D22165736FE52CC2EB26F3" Directory="dirCC4BF51C3FB0120CE9B785729700549B" Guid="A3E6F347-3BA7-4B6E-80AE-AB61A15595A1">
+            <Component Id="cmp369EE07923D22165736FE52CC2EB26F3" Directory="dirCC4BF51C3FB0120CE9B785729700549B" Guid="C8C0CA92-9720-4358-8C66-C55E55502D4B">
                 <File Id="fil802BE83AF1E1A5F696306F74FDD233CB" KeyPath="yes" Source="$(var.ModuleDir)\lib\Json.Automation.dll" />
             </Component>
-            <Component Id="cmpB085C70CFD9C6086A7FFC086D2B2F754" Directory="dirCC4BF51C3FB0120CE9B785729700549B" Guid="7B031A98-25ED-47FC-B351-118C244D8387">
+            <Component Id="cmpB085C70CFD9C6086A7FFC086D2B2F754" Directory="dirCC4BF51C3FB0120CE9B785729700549B" Guid="85450776-FC65-4A75-9E9A-F4A2AA42119C">
                 <File Id="fil39CF4583E9A08DB9E8100A05040D28DC" KeyPath="yes" Source="$(var.ModuleDir)\lib\Newtonsoft.Json.dll" />
             </Component>
         </ComponentGroup>
